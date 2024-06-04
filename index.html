@@ -15,12 +15,12 @@
   </head>
   <body>
     <header class="header">
-      <p class="logo">Noah</p>
+      <p class="logo"> &lt; / noah &gt;</p>
       <nav class="nav">
         <ul class="main-nav-list">
           <li><a href="#home" class="nav-link">home</a></li>
           <li><a href="#skills" class="nav-link">skills</a></li>
-          <li><a href="#" class="nav-link">projects</a></li>
+          <li><a href="#projects" class="nav-link">projects</a></li>
           <li><a href="#" class="nav-link cta">contact</a></li>
         </ul>
       </nav>
@@ -30,7 +30,7 @@
         <div class="hero">
           <div class="hero-text-box">
             <h2 class="heading-secondary">Hello there 👋,</h2>
-            <h1 class="heading-primary">I'm Noah Shan.</h1>
+            <h1 class="heading-primary heading-hero">I'm Noah Shan.</h1>
             <h2 class="heading-secondary developer">#Full Stack Developer.</h2>
 
             <p class="hero-desc">
@@ -52,7 +52,7 @@
 
       <section class="section-skills" id="skills">
         <div class="skills">
-          <h1 class="heading-primary section--2--heading">Tech Stack</h1>
+          <h1 class="heading-primary heading-skills">Tech Stack</h1>
           <div class="container">
             <img src="./assets/skills/java.svg" alt="language logo" />
             <img src="./assets/skills/javascript.svg" alt="language logo" />
@@ -65,6 +65,84 @@
             <img src="./assets/skills/mongoose.svg" alt="language logo" />
             <img src="./assets/skills/mysql.svg" alt="language logo" />
           </div>
+        </div>
+      </section>
+
+      <section class="section-projects" id="projects">
+        <div class="container grid projects">
+          <h1 class="heading-primary heading-projects">Projects</h1>
+          <div class="grid grid-col-1">
+
+            
+            <div class="grid grid-col-2 project right">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="project-1"
+                class="project-img"
+              />
+              <div class="project-info">
+                <h2 class="project-title">Weather</h2>
+                <p class="project-desc">
+                  Developed a dynamic weather forecasting website using HTML, CSS, and JavaScript, integrating the OpenWeather API. Features include hourly weather updates, past three days' weather data, a seven-day forecast, and a location search functionality, providing users with comprehensive and up-to-date weather information.
+                </p>
+                <a href="#" class="btn btn-project">It might rain today &rarr;</a>
+              </div>
+            </div>
+
+            <div class="grid grid-col-2 project">
+              <div class="project-info">
+                <h2 class="project-title">Natours</h2>
+                <p class="project-desc">
+                  This project is a comprehensive Tour Management Site designed
+                  to facilitate the booking and management of tours. Built using
+                  Node.js, Express.js, MongoDB, and Mongoose, it offers robust
+                  functionalities including tour booking, CRUD operations for
+                  tours, and secure user authentication and authorization.
+                </p>
+                <a href="#" class="btn btn-project btn-left">Go on a tour &rarr;</a>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1482332486572-10fff1bedfbe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="project-1"
+                class="project-img"
+              />
+            </div>
+
+            <div class="grid grid-col-2 project right">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="project-1"
+                class="project-img"
+              />
+              <div class="project-info">
+                <h2 class="project-title">Omini Food</h2>
+                <p class="project-desc">
+                  Omini Food is a user-friendly food ordering website designed
+                  to provide a seamless experience for users to browse, select,
+                  and order their favorite meals online. The site features a
+                  clean, responsive design and intuitive navigation, ensuring an
+                  optimal user experience across all devices.
+                </p>
+                <a href="#" class="btn btn-project">Oder a healthy meal &rarr;</a>
+              </div>
+            </div>
+
+            <div class="grid grid-col-2 project">
+              <div class="project-info">
+                <h2 class="project-title">Mapty</h2>
+                <p class="project-desc">
+                  Mapty is an interactive workout location tracker designed to enhance your fitness journey by allowing you to log and visualize your workout locations on a map. Built using HTML, CSS, and JavaScript, this application leverages the Geolocation API to pinpoint your current location and the Leaflet.js library to display and manage map interactions.
+                </p>
+                <a href="#" class="btn btn-project btn-left">Let's get fit &rarr;</a>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1601972599748-19fe5a7e756f?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="project-1"
+                class="project-img"
+              />
+            </div>
+          </div>
+          <a href="#" class="btn btn-more"> For more &rarr;</a>
         </div>
       </section>
     </main>
