@@ -15,13 +15,13 @@
   </head>
   <body>
     <header class="header">
-      <p class="logo"> &lt; / noah &gt;</p>
+      <p class="logo">&lt; / noah &gt;</p>
       <nav class="nav">
         <ul class="main-nav-list">
           <li><a href="#home" class="nav-link">home</a></li>
           <li><a href="#skills" class="nav-link">skills</a></li>
           <li><a href="#projects" class="nav-link">projects</a></li>
-          <li><a href="#" class="nav-link cta">contact</a></li>
+          <li><a href="#contact" class="nav-link cta">contact</a></li>
         </ul>
       </nav>
     </header>
@@ -38,7 +38,7 @@
               design to back-end development. Combining creativity with
               technical expertise to deliver robust, user-friendly applications.
             </p>
-            <a href="#" class="btn call-to-action">download resume &darr;</a>
+            <a href="#" class="btn call-to-action" download="./assets/cv.pdf">download resume &darr;</a>
           </div>
           <div class="hero-img-box">
             <img
@@ -72,20 +72,25 @@
         <div class="container grid projects">
           <h1 class="heading-primary heading-projects">Projects</h1>
           <div class="grid grid-col-1">
-
-            
             <div class="grid grid-col-2 project right">
               <img
-                src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1630260667842-830a17d12ec9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="project-1"
                 class="project-img"
               />
               <div class="project-info">
                 <h2 class="project-title">Weather</h2>
                 <p class="project-desc">
-                  Developed a dynamic weather forecasting website using HTML, CSS, and JavaScript, integrating the OpenWeather API. Features include hourly weather updates, past three days' weather data, a seven-day forecast, and a location search functionality, providing users with comprehensive and up-to-date weather information.
+                  Developed a dynamic weather forecasting website using HTML,
+                  CSS, and JavaScript, integrating the OpenWeather API. Features
+                  include hourly weather updates, past three days' weather data,
+                  a seven-day forecast, and a location search functionality,
+                  providing users with comprehensive and up-to-date weather
+                  information.
                 </p>
-                <a href="#" class="btn btn-project">It might rain today &rarr;</a>
+                <a href="#" class="btn btn-project"
+                  >It might rain today &rarr;</a
+                >
               </div>
             </div>
 
@@ -99,7 +104,9 @@
                   functionalities including tour booking, CRUD operations for
                   tours, and secure user authentication and authorization.
                 </p>
-                <a href="#" class="btn btn-project btn-left">Go on a tour &rarr;</a>
+                <a href="#" class="btn btn-project btn-left"
+                  >Go on a tour &rarr;</a
+                >
               </div>
               <img
                 src="https://images.unsplash.com/photo-1482332486572-10fff1bedfbe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -123,7 +130,9 @@
                   clean, responsive design and intuitive navigation, ensuring an
                   optimal user experience across all devices.
                 </p>
-                <a href="#" class="btn btn-project">Oder a healthy meal &rarr;</a>
+                <a href="#" class="btn btn-project"
+                  >Oder a healthy meal &rarr;</a
+                >
               </div>
             </div>
 
@@ -131,9 +140,16 @@
               <div class="project-info">
                 <h2 class="project-title">Mapty</h2>
                 <p class="project-desc">
-                  Mapty is an interactive workout location tracker designed to enhance your fitness journey by allowing you to log and visualize your workout locations on a map. Built using HTML, CSS, and JavaScript, this application leverages the Geolocation API to pinpoint your current location and the Leaflet.js library to display and manage map interactions.
+                  Mapty is an interactive workout location tracker designed to
+                  enhance your fitness journey by allowing you to log and
+                  visualize your workout locations on a map. Built using HTML,
+                  CSS, and JavaScript, this application leverages the
+                  Geolocation API to pinpoint your current location and the
+                  Leaflet.js library to display and manage map interactions.
                 </p>
-                <a href="#" class="btn btn-project btn-left">Let's get fit &rarr;</a>
+                <a href="#" class="btn btn-project btn-left"
+                  >Let's get fit &rarr;</a
+                >
               </div>
               <img
                 src="https://images.unsplash.com/photo-1601972599748-19fe5a7e756f?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -142,7 +158,64 @@
               />
             </div>
           </div>
-          <a href="#" class="btn btn-more"> For more &rarr;</a>
+          <a href="https://github.com/Sinna-Shan/my-portfolio" target="_blank" class="btn btn-more"> For more &rarr;</a>
+        </div>
+      </section>
+
+      <section class="section-contact" id="contact">
+        <div class="contact container grid">
+          <h1 class="heading-primary heading-contact">Get in Touch</h1>
+          <div class="grid grid-col-2 form-container">
+            <div class="img-container"></div>
+            <div class="contact-form">
+              <form action="">
+                <label for="to" class="lbl">from</label><br />
+                <input type="email" name="to" id="from" class="inputs" placeholder="your email gose here" /><br />
+
+                <label for="to" class="lbl">to</label><br />
+                <input
+                  type="email"
+                  name="from"
+                  value="noahluth.official@gmail.com"
+                  id="to"
+                  class="inputs"
+                /><br />
+
+                <label for="msg" class="lbl">message</label><br />
+                <textarea
+                  name="message"
+                  placeholder="say hello to me here...😉"
+                  id="msg"
+                  cols="30"
+                  rows="10"
+                  class="inputs txt-area"
+                  maxlength="1000"
+                  wrap="soft"
+                  required
+                ></textarea
+                ><br />
+
+                <div class="btn-container">
+                  <input type="submit" value="send" class="btn-form-sub" />
+                  <div class="social-btns">
+                    <a
+                      href="https://www.linkedin.com/in/noah-luth-57a0232a1"
+                      target="_blank"
+                      ><img src="./assets/linked-in.svg" alt=""
+                    /></a>
+                    <a href="https://wa.me/+94763236693" target="_blank"
+                      ><img src="./assets/social-media/whatsapp.svg" alt=""
+                    /></a>
+                    <a
+                      href="https://web.facebook.com/noah.singho.1/"
+                      target="_blank"
+                      ><img src="./assets/social-media/facebook.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>

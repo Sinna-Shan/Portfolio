@@ -187,15 +187,15 @@ body {
 /* ************************* */
 
 .section-skills {
-  background-color: #e9ecef;
+  background-color: #862e9c;
   padding: 9.6rem 0;
   margin: 0 auto;
   min-height: 100vh;
 }
 
 .heading-skills {
-  padding-bottom: 6rem;
-  color: #333;
+  padding-bottom: 9.6rem;
+  color: #f3d9fa;
 }
 .skills {
   display: flex;
@@ -207,11 +207,19 @@ body {
 .skills .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 5rem;
+  gap: 8rem;
 }
 
 .skills .container img {
   padding: 2rem;
+  background-color: #f3d9fa;
+  border-radius: 50%;
+  box-shadow: 0 .3rem .3rem 0rem #333;
+  transition: all .2s linear;
+}
+
+.skills .container img:hover{
+  transform: scale(1.09);
 }
 
 /* ************************* */
@@ -233,12 +241,12 @@ body {
   padding: 1rem 6rem;
   margin: 0 auto;
 
-  background: #662f74cc;
+  background: rgb(204, 93, 232, .8);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .right {
@@ -276,7 +284,7 @@ body {
   transform: translateX(-1rem);
 }
 
-.btn-left:hover{
+.btn-left:hover {
   transform: translateX(1rem);
 }
 .project img {
@@ -286,19 +294,141 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.project img:hover{
+.project img:hover {
   transform: translateY(-1rem);
 }
 
-.btn-more:visited,.btn-more:link{
+.btn-more:visited,
+.btn-more:link {
   background-color: #7a388b;
   color: #e9ecef;
+  font-weight: 600;
 }
 
-.btn-more:active,.btn-more:hover{
+.btn-more:active,
+.btn-more:hover {
   transform: scale(1.05);
-  box-shadow: 0 1rem .7rem  #ced4da;
+  box-shadow: 0 1rem 0.7rem #ced4da;
   background-color: #52255d;
   color: #fff;
+}
 
+/* ************************* */
+/* CONTACT SECTION STYLES */
+/* ************************* */
+
+.section-contact {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+}
+
+.heading-contact {
+  color: #e9ecef;
+}
+.contact {
+  padding: 9.6rem 0;
+}
+
+.form-container {
+  min-height: 80vh;
+  width: 100%;
+
+  align-content: stretch;
+  justify-content: stretch;
+  align-items: center;
+  justify-items: center;
+  gap: 0;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/196656/pexels-photo-196656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-size: cover;
+}
+
+
+.contact-form {
+  background: rgb(204, 93, 232);
+  background: linear-gradient(
+    0deg,
+    rgba(204, 93, 232, 1) 0%,
+    rgba(122, 56, 139, 1) 80%
+  );
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form form {
+  width: 100%;
+  padding: 4rem;
+  box-shadow: -1rem 0rem 1rem 0rem #333;
+}
+
+.lbl {
+  display: inline-block;
+  color: #e9ecef;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.inputs {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  padding-left: 2rem;
+  font-size: 1.8rem;
+}
+
+.txt-area {
+  height: 100%;
+  padding: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn-form-sub {
+  width: 25%;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #e9ecef;
+  box-shadow: 1rem 0 0 0rem #862e9c;
+  color: #862e9c;
+  transition: all .3s ease-in-out;
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-form-sub:hover{
+  background-color: #3d1c46;
+  box-shadow: 1.5rem 0 0 .4rem #f3d9fa;
+  color: #e9ecef;
+  
+}
+
+.social-btns{
+  display: flex;
+  gap: 1rem;
+}
+.social-btns a img {
+  width: 4.8rem;
 }
