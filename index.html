@@ -11,6 +11,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "_u-VlGeHmCN0tBMy4",
+            });
+        })();
+    </script>
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -168,23 +177,17 @@
           <div class="grid grid-col-2 form-container">
             <div class="img-container"></div>
             <div class="contact-form">
-              <form action="">
-                <label for="to" class="lbl">from</label><br />
-                <input type="email" name="to" id="from" class="inputs" placeholder="your email gose here" /><br />
+              <form action="#" class="con-form">
+                <label for="from_name" class="lbl">name</label><br />
+                <input type="text" name="to" id="from_name" class="inputs" placeholder="your name gose here" required/><br />
 
-                <label for="to" class="lbl">to</label><br />
-                <input
-                  type="email"
-                  name="from"
-                  value="noahluth.official@gmail.com"
-                  id="to"
-                  class="inputs"
-                /><br />
+                <label for="email_id" class="lbl">email</label><br />
+                <input type="email" name="to" id="email_id" class="inputs" placeholder="your email gose here" required/><br />
 
                 <label for="msg" class="lbl">message</label><br />
                 <textarea
                   name="message"
-                  placeholder="say hello to me here...😉"
+                  placeholder="your message to me here...😉"
                   id="msg"
                   cols="30"
                   rows="10"
@@ -219,5 +222,8 @@
         </div>
       </section>
     </main>
+    <footer class="section-footer">
+       ©️ copy right. All rights reserved. <br> created in 2024 by Noah Shan.
+    </footer>
   </body>
 </html>
