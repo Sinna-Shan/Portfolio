@@ -3,227 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noah Shan | Developer</title>
+    <link rel="icon" href="assets/icons/title-img.png" />
+
+    <!-- SCRIPTS -->
+
+    <!-- ionicon scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- custom scripts -->
+    <script defer src="js/script.js"></script>
+
+    <!-- STYLE SHEETS -->
+
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "_u-VlGeHmCN0tBMy4",
-            });
-        })();
-    </script>
-    <script defer src="script.js"></script>
+
+    <!-- custom links -->
+    <link rel="stylesheet" href="css/genaral.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <title>Noah's Portfolio</title>
   </head>
   <body>
     <header class="header">
-      <p class="logo">&lt; / noah &gt;</p>
-      <nav class="nav">
+      <div class="logo">
+        <img src="assets/icons/logo.png" alt="logo" />
+      </div>
+      <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#home" class="nav-link">home</a></li>
-          <li><a href="#skills" class="nav-link">skills</a></li>
-          <li><a href="#projects" class="nav-link">projects</a></li>
-          <li><a href="#contact" class="nav-link cta">contact</a></li>
+          <li><a class="main-nav-link" href="#">home</a></li>
+          <li><a class="main-nav-link" href="#">about</a></li>
+          <li><a class="main-nav-link" href="#">skills</a></li>
+          <li><a class="main-nav-link" href="#">projects</a></li>
+          <li><a class="main-nav-link" href="#">contact</a></li>
         </ul>
       </nav>
+
+      <!-- buttons for close and open navigation in small devices -->
+      <div class="mobile-nav-btns">
+        <ion-icon name="menu-outline" class="mobile-nav-btn"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-btn"></ion-icon>
+      </div>
     </header>
+
     <main>
-      <section class="section-hero" id="home">
-        <div class="hero">
-          <div class="hero-text-box">
-            <h2 class="heading-secondary">Hello there 👋,</h2>
-            <h1 class="heading-primary heading-hero">I'm Noah Shan.</h1>
-            <h2 class="heading-secondary developer">#Full Stack Developer.</h2>
-
-            <p class="hero-desc">
-              Crafting seamless and dynamic web experiences from front-end
-              design to back-end development. Combining creativity with
-              technical expertise to deliver robust, user-friendly applications.
-            </p>
-            <a href="#" class="btn call-to-action" download="./assets/cv.pdf">download resume &darr;</a>
+      <section class="section-hero">
+          <div class="hero container grid grid--col-2">
+            <div class="hero-text-box">
+              <h1 class="heading-primary">Noah Shan Luth</h1>
+              <h3 class="hero-sub-heading">#full stack developer</h3>
+              <p class="hero-text">
+                Crafting seamless and dynamic web experiences from front-end
+                design to back-end development. Combining creativity with
+                technical expertise to deliver robust, user-friendly
+                applications.
+              </p>
+              <button class="btn btn-hero">Download CV</button>
+            </div>
+            <div class="hero-img-box">
+              <img src="./assets/hero.jpg" alt="laptop on a bed" />
+            </div>
           </div>
-          <div class="hero-img-box">
-            <img
-              src="assets/hero-img.svg"
-              alt="2d-developer-illustretion"
-              class="hero-img"
-            />
-          </div>
-        </div>
       </section>
 
-      <section class="section-skills" id="skills">
-        <div class="skills">
-          <h1 class="heading-primary heading-skills">Tech Stack</h1>
-          <div class="container">
-            <img src="./assets/skills/java.svg" alt="language logo" />
-            <img src="./assets/skills/javascript.svg" alt="language logo" />
-            <img src="./assets/skills/html.svg" alt="language logo" />
-            <img src="./assets/skills/css.svg" alt="language logo" />
-            <img src="./assets/skills/express-js.svg" alt="language logo" />
-            <img src="./assets/skills/nestjs.svg" alt="language logo" />
-            <img src="./assets/skills/nodejs.svg" alt="language logo" />
-            <img src="./assets/skills/mongodb.svg" alt="language logo" />
-            <img src="./assets/skills/mongoose.svg" alt="language logo" />
-            <img src="./assets/skills/mysql.svg" alt="language logo" />
-          </div>
-        </div>
-      </section>
-
-      <section class="section-projects" id="projects">
-        <div class="container grid projects">
-          <h1 class="heading-primary heading-projects">Projects</h1>
-          <div class="grid grid-col-1">
-            <div class="grid grid-col-2 project right">
-              <img
-                src="https://images.unsplash.com/photo-1630260667842-830a17d12ec9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="project-1"
-                class="project-img"
-              />
-              <div class="project-info">
-                <h2 class="project-title">Weather</h2>
-                <p class="project-desc">
-                  Developed a dynamic weather forecasting website using HTML,
-                  CSS, and JavaScript, integrating the OpenWeather API. Features
-                  include hourly weather updates, past three days' weather data,
-                  a seven-day forecast, and a location search functionality,
-                  providing users with comprehensive and up-to-date weather
-                  information.
-                </p>
-                <a href="#" class="btn btn-project"
-                  >It might rain today &rarr;</a
-                >
-              </div>
-            </div>
-
-            <div class="grid grid-col-2 project">
-              <div class="project-info">
-                <h2 class="project-title">Natours</h2>
-                <p class="project-desc">
-                  This project is a comprehensive Tour Management Site designed
-                  to facilitate the booking and management of tours. Built using
-                  Node.js, Express.js, MongoDB, and Mongoose, it offers robust
-                  functionalities including tour booking, CRUD operations for
-                  tours, and secure user authentication and authorization.
-                </p>
-                <a href="#" class="btn btn-project btn-left"
-                  >Go on a tour &rarr;</a
-                >
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1482332486572-10fff1bedfbe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="project-1"
-                class="project-img"
-              />
-            </div>
-
-            <div class="grid grid-col-2 project right">
-              <img
-                src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="project-1"
-                class="project-img"
-              />
-              <div class="project-info">
-                <h2 class="project-title">Omini Food</h2>
-                <p class="project-desc">
-                  Omini Food is a user-friendly food ordering website designed
-                  to provide a seamless experience for users to browse, select,
-                  and order their favorite meals online. The site features a
-                  clean, responsive design and intuitive navigation, ensuring an
-                  optimal user experience across all devices.
-                </p>
-                <a href="#" class="btn btn-project"
-                  >Oder a healthy meal &rarr;</a
-                >
-              </div>
-            </div>
-
-            <div class="grid grid-col-2 project">
-              <div class="project-info">
-                <h2 class="project-title">Mapty</h2>
-                <p class="project-desc">
-                  Mapty is an interactive workout location tracker designed to
-                  enhance your fitness journey by allowing you to log and
-                  visualize your workout locations on a map. Built using HTML,
-                  CSS, and JavaScript, this application leverages the
-                  Geolocation API to pinpoint your current location and the
-                  Leaflet.js library to display and manage map interactions.
-                </p>
-                <a href="#" class="btn btn-project btn-left"
-                  >Let's get fit &rarr;</a
-                >
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1601972599748-19fe5a7e756f?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="project-1"
-                class="project-img"
-              />
-            </div>
-          </div>
-          <a href="https://github.com/Sinna-Shan/my-portfolio" target="_blank" class="btn btn-more"> For more &rarr;</a>
-        </div>
-      </section>
-
-      <section class="section-contact" id="contact">
-        <div class="contact container grid">
-          <h1 class="heading-primary heading-contact">Get in Touch</h1>
-          <div class="grid grid-col-2 form-container">
-            <div class="img-container"></div>
-            <div class="contact-form">
-              <form action="#" class="con-form">
-                <label for="from_name" class="lbl">name</label><br />
-                <input type="text" name="to" id="from_name" class="inputs" placeholder="your name gose here" required/><br />
-
-                <label for="email_id" class="lbl">email</label><br />
-                <input type="email" name="to" id="email_id" class="inputs" placeholder="your email gose here" required/><br />
-
-                <label for="msg" class="lbl">message</label><br />
-                <textarea
-                  name="message"
-                  placeholder="your message to me here...😉"
-                  id="msg"
-                  cols="30"
-                  rows="10"
-                  class="inputs txt-area"
-                  maxlength="1000"
-                  wrap="soft"
-                  required
-                ></textarea
-                ><br />
-
-                <div class="btn-container">
-                  <input type="submit" value="send" class="btn-form-sub" />
-                  <div class="social-btns">
-                    <a
-                      href="https://www.linkedin.com/in/noah-luth-57a0232a1"
-                      target="_blank"
-                      ><img src="./assets/linked-in.svg" alt=""
-                    /></a>
-                    <a href="https://wa.me/+94763236693" target="_blank"
-                      ><img src="./assets/social-media/whatsapp.svg" alt=""
-                    /></a>
-                    <a
-                      href="https://web.facebook.com/noah.singho.1/"
-                      target="_blank"
-                      ><img src="./assets/social-media/facebook.svg" alt=""
-                    /></a>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+      <section class="section-about">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit cupiditate error ipsum cumque, ipsa minus rerum animi voluptatem quae deleniti at praesentium officiis exercitationem, labore perferendis. Fugit possimus dolore totam! Hic recusandae et doloremque ea temporibus cupiditate eum a blanditiis, itaque tempore sint id odit voluptas ut nemo perspiciatis dolorum nulla amet repudiandae facilis accusamus veritatis placeat impedit. Dolores veritatis, exercitationem iste voluptate deleniti animi numquam quia laboriosam sapiente? Non id praesentium ullam sint mollitia illo expedita? Cupiditate, illum earum. Nam quas repellat neque maxime illo modi accusamus vitae laudantium porro rem perferendis autem, ratione quidem placeat corrupti, qui quia.
+          </p>
       </section>
     </main>
-    <footer class="section-footer">
-       ©️ copy right. All rights reserved. <br> created in 2024 by Noah Shan.
-    </footer>
   </body>
 </html>
