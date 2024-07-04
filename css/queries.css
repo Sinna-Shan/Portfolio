@@ -5,10 +5,6 @@
   .hero {
     max-width: 120rem;
   }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /************************/
@@ -107,17 +103,22 @@
     text-align: center;
   }
 
-  .hero-img-box {
+  .hero-img-box,
+  .about-img-box {
     display: flex;
     justify-content: center;
   }
 
-  .hero-img-box img,.about-img-box img  {
+  .hero-img-box img {
     width: 50%;
   }
 
   .about-img-box img {
-    display: none;
+    width: 50%;
+  }
+
+  .projects-gallery {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -125,6 +126,9 @@
 /* BELOW 544PX (mobile) */
 /************************/
 @media (max-width: 34em) {
+  .projects-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 /*
     - font size (px) : 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
