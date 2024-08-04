@@ -1,8 +1,8 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import ProjectsPage from './pages/ProjectsPage'
-import ContactPage from './pages/ContactPage'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/home page/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
@@ -19,4 +19,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
