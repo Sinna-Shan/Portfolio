@@ -1,0 +1,10 @@
+.nav{
+    background-color: olivedrab;
+    height: 3rem;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
