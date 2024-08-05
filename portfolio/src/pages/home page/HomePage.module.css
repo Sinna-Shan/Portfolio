@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #f1f3f5;
 }
 
 .container {
@@ -57,11 +58,11 @@
 
 .imgContainer {
   margin-top: 3rem;
-  width: 10rem;
-  height: 10rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 3rem;
+  margin-bottom: .5rem;
   box-shadow: 0 .3rem .3rem #ccc;
 }
 
