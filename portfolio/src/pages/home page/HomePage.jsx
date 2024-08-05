@@ -10,12 +10,21 @@ function HomePage() {
       <main className={styles.home}>
         <Nav />
         <section className={styles.container}>
-          <div className={styles.imgContainer}>
-            <img src="my image cropped.jpg" alt="my image" />
+          <div className={styles.intro}>
+            <div className={styles.imgContainer}>
+              <img src="my image cropped.jpg" alt="my image" />
+            </div>
+            <div className={styles.headerContainer}>
+              <h1>I'm</h1>
+              <div className={styles.words}>
+                <span>Noah Shan Luth</span>
+                <span>a Designer</span>
+                <span>a Front-end Developer</span>
+                <span>a Back-end Developer</span>
+                <span>Noah Shan Luth</span>
+              </div>
+            </div>
           </div>
-          <h1>
-            I'm <span>Noah Luth</span>
-          </h1>
           <p>
             a full stack developer with a passion for creating robust,
             user-friendly web applications. From front-end design to back-end

@@ -15,13 +15,53 @@
 }
 
 .container h1 {
-    letter-spacing: -2px;
+  letter-spacing: -2px;
   font-size: 3rem;
-  margin-bottom: 2rem;
 }
 
-.container span {
+.headerContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.words {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 4rem;
+  overflow: hidden;
+}
+.words span {
   color: orangered;
+  font-size: 3rem;
+  animation: spin_words 6s ease-in-out infinite;
+}
+
+@keyframes spin_words {
+  10% {
+    transform: translateY(-112%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-212%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  65% {
+    transform: translateY(-312%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-412%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
 }
 
 .container p {
@@ -32,7 +72,7 @@
 }
 
 .container button {
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
   padding: 1rem 2rem;
   border: none;
@@ -56,14 +96,20 @@
   color: #fff;
 }
 
+.container .intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
 .imgContainer {
-  margin-top: 3rem;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: .5rem;
-  box-shadow: 0 .3rem .3rem #ccc;
+  box-shadow: 0 0.3rem 0.3rem #ccc;
 }
 
 .imgContainer img {
