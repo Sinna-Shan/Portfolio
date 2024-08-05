@@ -1,13 +1,29 @@
-import { useRef } from "react";
+/* eslint-disable no-unused-vars */
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Nav.module.css"
 
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  
   const navRef = useRef()
 
   function showNavBar() {
     navRef.current.classList.toggle(styles.navOpen);
+    setIsOpen((isOpen)=>!isOpen);
   }
+
+  useEffect(
+    function () {
+      if (isOpen) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "unset";
+      }
+    },
+    [isOpen]
+  );
   return (
     <header className={styles.header} ref={navRef}>
       <nav className={styles.nav}>

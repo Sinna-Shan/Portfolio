@@ -19,8 +19,8 @@ function HomePage() {
               <div className={styles.words}>
                 <span>Noah Shan Luth</span>
                 <span>a Designer</span>
-                <span>a Front-end Developer</span>
-                <span>a Back-end Developer</span>
+                <span>a Frontend Dev</span>
+                <span>a Backend Dev</span>
                 <span>Noah Shan Luth</span>
               </div>
             </div>

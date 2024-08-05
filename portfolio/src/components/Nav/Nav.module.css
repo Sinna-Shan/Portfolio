@@ -87,15 +87,26 @@ a:hover {
     align-items: center;
     justify-content: center;
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transition: 0.5s;
-    transform: translateY(-100);
+    transform: translateY(-100%);
+    
   }
 
   .navOpen .nav {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0%);
+    overflow: hidden;
   }
 
   .header .nav ul {
     flex-direction: column;
+  }
+
+  .navOpen :global(html){
+    overflow-y: hidden;
   }
 }
