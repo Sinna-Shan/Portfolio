@@ -1,55 +1,59 @@
-/* eslint-disable no-unused-vars */
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import styles from "./Nav.module.css"
+
+function NavLinks() {
+  return (
+    <ul className="flex h-full gap-4 items-center text-lg flex-col lg:flex-row">
+      <li>
+        <NavLink to="/" className={({isActive}) => isActive ? 'text-[orangered] font-bold p-4' : 'font-normal p-4 hover:text-[orangered]'}>
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/about" className={({isActive}) => isActive ? 'text-[orangered] font-bold p-4' : 'font-normal p-4 hover:text-[orangered]'}>
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/projects" className={({isActive}) => isActive ? 'text-[orangered] font-bold p-4' : 'font-normal p-4 hover:text-[orangered]'}>
+          Projects
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact" className={({isActive}) => isActive ? 'text-[orangered] font-bold p-4' : 'font-normal p-4 hover:text-[orangered]'}>
+          Contact
+        </NavLink>
+      </li>
+    </ul>
+  );
+}
 
 function Nav() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  
-  const navRef = useRef()
-
-  function showNavBar() {
-    navRef.current.classList.toggle(styles.navOpen);
-    setIsOpen((isOpen)=>!isOpen);
+  function displayNav() {
+    setOpen((open) => !open);
   }
-
-  useEffect(
-    function () {
-      if (isOpen) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "unset";
-      }
-    },
-    [isOpen]
-  );
   return (
-    <header className={styles.header} ref={navRef}>
-      <nav className={styles.nav}>
-        <ul>
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About</NavLink>
-          </li>
-          <li>
-            <NavLink to="/projects">Projects</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">Contact</NavLink>
-          </li>
-        </ul>
+    <header className="bg-[#f8f9fa] w-full h-16 flex flex-wrap drop-shadow-lg justify-end">
+      <nav className="hidden lg:block font-bold">
+        <NavLinks />
       </nav>
-      <div className={styles.mobileNav}>
-        <button className={styles.menuBtn} onClick={showNavBar} name="close">
+
+      <div className="lg:hidden flex items-center justify-center p-4">
+        <button onClick={displayNav} className={`${!open ? "hidden" : ""}`}>
           <img src="close.svg" alt="close button" />
         </button>
-        <button className={styles.menuBtn} onClick={showNavBar} name="open">
+        <button onClick={displayNav} className={`${open ? "hidden" : ""}`}>
           <img src="menu.svg" alt="menu button" />
         </button>
       </div>
+
+      {open && (
+        <div className="absolute top-16 w-full bg-[#f8f9fa] h-64 z-30 flex justify-center transition-all duration-300 lg:hidden">
+          <NavLinks />
+        </div>
+      )}
     </header>
   );
 }
