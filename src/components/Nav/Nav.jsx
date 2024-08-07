@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function NavLinks() {
   return (
-    <ul className="flex h-full gap-4 items-center text-lg flex-col lg:flex-row">
+    <ul className="flex h-full gap-4 items-center text-lg flex-col lg:flex-row ">
       <li>
         <NavLink to="/" className={({isActive}) => isActive ? 'text-[orangered] font-bold p-4' : 'font-normal p-4 hover:text-[orangered]'}>
           Home
@@ -35,7 +35,7 @@ function Nav() {
     setOpen((open) => !open);
   }
   return (
-    <header className="bg-[#f8f9fa] w-full h-16 flex flex-wrap drop-shadow-lg justify-end">
+    <header className="bg-[#f8f9fa] w-full h-16 flex flex-wrap drop-shadow-lg justify-end z-20">
       <nav className="hidden lg:block font-bold">
         <NavLinks />
       </nav>
@@ -50,7 +50,7 @@ function Nav() {
       </div>
 
       {open && (
-        <div className="absolute top-16 w-full bg-[#f8f9fa] h-64 z-30 flex justify-center transition-all duration-300 lg:hidden">
+        <div className="absolute z-50 top-16 w-full bg-[#f8f9fa] h-64 flex justify-center transition-all duration-300 lg:hidden">
           <NavLinks />
         </div>
       )}
