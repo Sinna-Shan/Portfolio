@@ -41,7 +41,7 @@ function HomePage() {
             and deliver results. Let's turn your vision into reality with clean
             code, innovative design, and a focus on performance.
           </p>
-          <Link to="/contact" className="">
+          <Link to="/about" className="">
             <button className="bg-[orangered] my-6 text-white px-5 py-2 text-lg rounded-md hover:shadow-[inset_0_0_0_0.2rem_orangered] hover:text-[orangered] hover:bg-[#f1f3f5] transition-all duration-300 sm:px-4 sm:py-2 sm:text-sm lg:text-[1.1rem] lg:py-3 lg:px-6 mt-8">
               let's collaborate...
             </button>
