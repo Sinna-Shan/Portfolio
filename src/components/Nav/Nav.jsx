@@ -19,11 +19,6 @@ function NavLinks() {
           Projects
         </NavLink>
       </li>
-      <li>
-        <NavLink to="/contact" className={({isActive}) => isActive ? 'text-[orangered] font-bold p-4' : 'font-normal p-4 hover:text-[orangered]'}>
-          Contact
-        </NavLink>
-      </li>
     </ul>
   );
 }
@@ -35,17 +30,17 @@ function Nav() {
     setOpen((open) => !open);
   }
   return (
-    <header className="bg-[#f8f9fa] w-full h-16 flex flex-wrap drop-shadow-lg justify-end z-20">
+    <header className="bg-[#f8f9fa] sticky top-0 w-full h-16 flex flex-wrap drop-shadow-lg justify-end z-20">
       <nav className="hidden lg:block font-bold">
         <NavLinks />
       </nav>
 
       <div className="lg:hidden flex items-center justify-center p-4">
         <button onClick={displayNav} className={`${!open ? "hidden" : ""}`}>
-          <img src="close.svg" alt="close button" />
+          <img src="close.svg" alt="close button" className="w-6" />
         </button>
         <button onClick={displayNav} className={`${open ? "hidden" : ""}`}>
-          <img src="menu.svg" alt="menu button" />
+          <img src="menu.svg" alt="menu button"  className="w-6"/>
         </button>
       </div>
 

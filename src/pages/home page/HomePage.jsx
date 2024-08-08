@@ -16,19 +16,19 @@ function HomePage() {
             <div className="flex gap-4">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl">I'm</h1>
               <div className="flex flex-col h-8 overflow-hidden sm:h-[2.5rem] lg:h-[3.4rem] leading-10">
-                <span className="text-3xl text-[orangered] lg:animate-word-wheel sm:text-4xl lg:text-5xl lg:mb-2">
+                <span className="text-3xl text-[orangered] lg:animate-word-wheel sm:text-4xl lg:text-6xl lg:mb-2">
                   Noah Shan Luth
                 </span>
-                <span className="text-3xl text-[orangered] lg:animate-word-wheel sm:text-4xl lg:text-5xl lg:mb-2">
+                <span className="text-3xl text-[orangered] lg:animate-word-wheel sm:text-4xl lg:text-6xl lg:mb-2">
                   a Designer
                 </span>
-                <span className="text-3xl text-[orangered] lg:animate-word-wheel sm:text-4xl lg:text-5xl lg:mb-2">
+                <span className="text-3xl text-[orangered] lg:animate-word-wheel sm:text-4xl lg:text-6xl lg:mb-2">
                   a Frontend Dev
                 </span>
-                <span className="text-3xl text-[orangered] lg:animate-word-wheel sm:text-4xl lg:text-5xl lg:mb-2">
+                <span className="text-3xl text-[orangered] lg:animate-word-wheel sm:text-4xl lg:text-6xl lg:mb-2">
                   a Backend Dev
                 </span>
-                <span className="text-3xl text-[orangered] lg:animate-word-wheel sm:text-4xl lg:text-5xl lg:mb-2">
+                <span className="text-3xl text-[orangered] lg:animate-word-wheel sm:text-4xl lg:text-6xl lg:mb-2">
                   Noah Shan Luth
                 </span>
               </div>
