@@ -4,6 +4,23 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-img": "url('hero-background.jpg')",
+      },
+      colors: {
+        primary: {
+          100: "#F7D98E",
+          200: "#F5CC68",
+          300: "#F2BF42",
+          400: "#A9862E",
+          500: "#614C1A",
+        },
+        shade: {
+          100: "#E9ECEF",
+          200: "#CED4DA",
+          300: "#495057",
+        },
+      },
       keyframes: {
         wheel: {
           "12.5%": {

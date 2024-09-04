@@ -1,21 +1,26 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/home page/HomePage";
-import AboutPage from "./pages/about page/AboutPage";
-import ProjectsPage from "./pages/project page/ProjectsPage";
-import ContactPage from "./pages/ContactPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+// import NavBar from "./components/NavBar";
+import Stats from "./components/Stats";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="about" element={<AboutPage />} />
-        <Route path="projects" element={<ProjectsPage />} />
-        <Route path="contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      {/* <header>
+        <NavBar />
+      </header> */}
+      <main>
+        <Home />
+        <Stats />
+        <About />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
 
