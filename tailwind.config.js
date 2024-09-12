@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-img": "url('hero-background.jpg')",
+        "hero-img": "url(hero-bg-1.jpg)"
       },
       colors: {
         primary: {
@@ -22,35 +22,27 @@ export default {
         },
       },
       keyframes: {
-        wheel: {
-          "12.5%": {
-            transform: "translateY(-125%)",
+        blob: {
+          "0%,100%": {
+            borderRadius: "70% 90% 70% 90%",
+            transform: "translate(-2%, 3%)",
           },
           "25%": {
-            transform: "translateY(-115%)",
-          },
-          "37.5%": {
-            transform: "translateY(-235%)",
+            borderRadius: "80% 60% 70% 50%",
+            transform: "translate(0%, 0%)",
           },
           "50%": {
-            transform: "translateY(-228%)",
+            borderRadius: "60% 90% 50% 90%",
+            transform: "translate(2%, 2%)",
           },
-          "62.5%": {
-            transform: "translateY(-350%)",
-          },
-          "74.5%": {
-            transform: "translateY(-340%)",
-          },
-          "87.5%": {
-            transform: "translateY(-460%)",
-          },
-          "100%": {
-            transform: "translateY(-450%)",
-          },
+          "75%": {
+            borderRadius: "80% 70% 90% 60%",
+            transform: "translate(0%, -2%)",
+          }
         },
       },
       animation: {
-        "word-wheel": "wheel 5s linear infinite",
+        blob: "blob 5s linear infinite",
       },
     },
   },
