@@ -12,21 +12,21 @@ import ProjectCard from "./ProjectCard";
 const projects = [
   {
     id: 1,
-    url: "pizza.jpg",
+    color: "primary-200",
     btnTxt: "taste it now",
     heading: "Fast Pizza",
     icon: <FaPizzaSlice className="text-8xl text-primary-300" />,
   },
   {
     id: 2,
-    url: "map.jpg",
+    color: "primary-400",
     btnTxt: "book now",
     heading: "world wise",
     icon: <FaMapLocationDot className="text-8xl text-primary-300" />,
   },
   {
     id: 3,
-    url: "movie.jpg",
+    color: "primary-500",
     btnTxt: "ready... action!",
     heading: "use popcorn",
     icon: <FaCompactDisc className="text-8xl text-primary-300" />,
@@ -49,7 +49,7 @@ function Projects() {
       </h3>
       <div className="relative bg-green-300" data-aos="flip-down">
         <FaRegCircleLeft
-          className="absolute left-1 top-1/2 z-50 text-2xl text-primary-100 lg:left-4 lg:text-4xl"
+          className="absolute left-2 top-1/2 z-50 text-2xl text-primary-100 lg:left-4 lg:text-4xl"
           onClick={previous}
         />
         <div className="flex h-[80dvh] overflow-hidden">
@@ -57,7 +57,7 @@ function Projects() {
             <ProjectCard
               heading={project.heading}
               btnTxt={project.btnTxt}
-              url={project.url}
+              color={project.color}
               key={project.id}
               id={project.id}
               count={count}
@@ -66,7 +66,7 @@ function Projects() {
           ))}
         </div>
         <FaRegCircleRight
-          className="absolute right-1 top-1/2 z-50 text-2xl text-primary-100 lg:right-4 lg:text-4xl"
+          className="absolute right-1 top-1/2 z-50 text-2xl text-primary-100 lg:right-2 lg:text-4xl"
           onClick={next}
         />
       </div>
