@@ -1,75 +1,93 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
-  FaRegCircleLeft,
-  FaRegCircleRight,
   FaPizzaSlice,
   FaMapLocationDot,
   FaCompactDisc,
+  FaHouseChimney,
+  FaPersonWalking,
+  FaCarrot,
 } from "react-icons/fa6";
 
 import ProjectCard from "./ProjectCard";
+import Button from "./Button";
 const projects = [
   {
     id: 1,
     color: "primary-200",
     btnTxt: "taste it now",
     heading: "Fast Pizza",
-    icon: <FaPizzaSlice className="text-8xl text-primary-300" />,
+    url: "pizza.jpg",
+    icon: <FaPizzaSlice className="text-5xl text-primary-300" />,
   },
   {
     id: 2,
     color: "primary-400",
-    btnTxt: "book now",
+    btnTxt: "stat now",
     heading: "world wise",
-    icon: <FaMapLocationDot className="text-8xl text-primary-300" />,
+    url: "jogging.jpg",
+    icon: <FaPersonWalking className="text-5xl text-primary-300" />,
   },
   {
     id: 3,
     color: "primary-500",
     btnTxt: "ready... action!",
     heading: "use popcorn",
-    icon: <FaCompactDisc className="text-8xl text-primary-300" />,
+    url: "movie.jpg",
+    icon: <FaCompactDisc className="text-5xl text-primary-300" />,
+  },
+  {
+    id: 4,
+    color: "primary-500",
+    btnTxt: "check in",
+    heading: "world oasis",
+    url: "cabin.jpg",
+    icon: <FaHouseChimney className="text-5xl text-primary-300" />,
+  },
+  {
+    id: 5,
+    color: "primary-500",
+    btnTxt: "book today!",
+    heading: "Natures",
+    icon: <FaMapLocationDot className="text-5xl text-primary-300" />,
+    url: "map.jpg",
+  },
+  {
+    id: 6,
+    color: "primary-500",
+    btnTxt: "Order now!",
+    heading: "Omini food",
+    icon: <FaCarrot className="text-5xl text-primary-300" />,
+    url: "order.jpg",
   },
 ];
 function Projects() {
-  const [count, setCount] = useState(1);
-  function next() {
-    if (count >= projects.length) return setCount(1);
-    setCount((c) => c + 1);
-  }
-  function previous() {
-    if (count <= 1) return setCount(projects.length);
-    setCount((c) => c - 1);
-  }
+  const [show, setShow] = useState(false);
+
   return (
-    <section className="w-full bg-primary-100">
-      <h3 className="py-5 text-center text-base text-shade-300 md:py-10 md:text-2xl lg:py-20 lg:text-4xl">
+    <section className="flex h-auto flex-col bg-primary-100">
+      <h3 className="pt-10 text-center text-3xl mb-10 md:mb-3 text-shade-300 md:py-10 md:text-4xl lg:py-10 lg:text-4xl">
         See what I&apos;ve built...
       </h3>
-      <div className="relative bg-green-300" data-aos="flip-down">
-        <FaRegCircleLeft
-          className="absolute left-2 top-1/2 z-50 text-2xl text-primary-100 lg:left-4 lg:text-4xl"
-          onClick={previous}
-        />
-        <div className="flex h-[80dvh] overflow-hidden">
-          {projects.map((project) => (
-            <ProjectCard
-              heading={project.heading}
-              btnTxt={project.btnTxt}
-              color={project.color}
-              key={project.id}
-              id={project.id}
-              count={count}
-              icon={project.icon}
-            />
-          ))}
-        </div>
-        <FaRegCircleRight
-          className="absolute right-1 top-1/2 z-50 text-2xl text-primary-100 lg:right-2 lg:text-4xl"
-          onClick={next}
-        />
+
+      <div
+        className={`mb-10 flex ${!show ? 'h-[15rem] md:h-[16rem]': 'h-full'} w-full flex-wrap justify-center gap-4 overflow-hidden px-3 ease-linear`}
+      >
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            url={project.url}
+            icon={project.icon}
+            btnTxt={project.btnTxt}
+            heading={project.heading}
+          />
+        ))}
       </div>
+      <footer className="mb-10 flex w-full justify-center">
+        <Button type={"primary"} onClick={() => setShow((s) => !s)}>
+          { !show ? 'show more' : 'show less' }
+        </Button>
+      </footer>
     </section>
   );
 }
