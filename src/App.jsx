@@ -1,21 +1,40 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/home page/HomePage";
-import AboutPage from "./pages/about page/AboutPage";
-import ProjectsPage from "./pages/project page/ProjectsPage";
-import ContactPage from "./pages/ContactPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import { FaAnglesUp } from "react-icons/fa6";
+import Stats from "./components/Stats";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import NavBar from "./components/NavBar";
+import { animateScroll } from "react-scroll";
 
 function App() {
+  useEffect(function () {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="about" element={<AboutPage />} />
-        <Route path="projects" element={<ProjectsPage />} />
-        <Route path="contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <header>
+        <NavBar />
+      </header>
+      <main>
+        <Home />
+        <Stats />
+        <About />
+        <Projects />
+        <Contact />
+        <FaAnglesUp
+          className="flex fixed bottom-5 right-5 z-10 h-12 w-12 cursor-pointer rounded-full bg-primary-500 p-3 text-base text-white"
+          onClick={() => animateScroll.scrollToTop()}
+        />
+      </main>
+      <Footer />
+    </>
   );
 }
 
