@@ -20,7 +20,7 @@ function Button({ type, onClick, children }) {
   }
   if (type === "ternary") {
     return (
-      <button className="flex items-center justify-center gap-3 rounded-md px-4 py-2 text-lg text-primary-300 shadow-[inset_0_0_0_.1rem] shadow-primary-300 lg:px-8 lg:py-4 lg:text-2xl">
+      <button className="flex items-center justify-center gap-3 rounded-md px-4 py-2 text-lg text-primary-300 shadow-[inset_0_0_0_.1rem] shadow-primary-300 lg:px-8 lg:py-4 lg:text-2xl hover:bg-primary-300 hover:shadow-none hover:text-shade-300 duration-300 ease-linear">
         {children}
       </button>
     );

@@ -2,10 +2,10 @@ import { FaDownload, FaWhatsapp } from "react-icons/fa6";
 import Button from "./Button";
 function About() {
   return (
-    <section className="h-screen bg-shade-100">
-      <container className="flex h-screen w-auto items-center justify-around text-center mx-2">
+    <section className="min-h-screen bg-shade-100" id="about">
+      <div className="mx-4 flex h-screen w-auto items-center justify-around text-center">
         <div
-          className="hidden h-full w-full items-center justify-center sm:flex md:order-2 sm:w-1/2"
+          className="hidden h-full w-full items-center justify-center sm:flex sm:w-1/2 md:order-2"
           data-aos="fade-right"
         >
           <div className="h-64 w-64 animate-blob overflow-hidden border-4 border-primary-500 bg-cover shadow-lg hover:border-white hover:duration-500 hover:ease-in-out sm:border-4 md:h-80 md:w-72 lg:h-96 lg:w-96">
@@ -35,15 +35,19 @@ function About() {
             className="mt-3 flex w-full flex-wrap items-center justify-center gap-2 px-3 lg:gap-3"
             data-aos="fade-up"
           >
-            <Button type="primary">
-              <FaDownload className="text-xl"/> resume
-            </Button>
-            <Button type="secondary">
-              <FaWhatsapp className="text-2xl lg:text-3xl" /> ask me!
-            </Button>
+            <a href="CV.pdf" download>
+              <Button type="primary">
+                <FaDownload className="text-xl" /> resume
+              </Button>
+            </a>
+            <a href="https://wa.me/763236693">
+              <Button type="secondary">
+                <FaWhatsapp className="text-2xl lg:text-3xl" /> ask me!
+              </Button>
+            </a>
           </div>
         </div>
-      </container>
+      </div>
     </section>
   );
 }

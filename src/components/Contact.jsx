@@ -1,7 +1,7 @@
 import { FaEnvelope, FaMobileScreen } from "react-icons/fa6";
 function Contact() {
   return (
-    <section className="flex min-h-[60dvh] w-full">
+    <section className="flex min-h-[60dvh] w-full" id="contact">
       <div
         className="hidden bg-shade-300 py-4 md:flex md:w-1/2 md:items-center md:justify-end md:pr-5 lg:py-16 lg:pr-10"
         data-aos="fade-right"
@@ -26,7 +26,7 @@ function Contact() {
         >
           <FaEnvelope className="text-shade-300" /> noahluth.official@gmail.com
         </a>
-        <p className="flex items-center justify-end gap-5 pt-2 text-lg text-white md:justify-start md:gap-3 md:text-lg lg:text-2xl">
+        <p className="flex items-center justify-end gap-5 pt-2 text-lg text-white md:justify-start md:gap-3 md:text-lg lg:text-2xl lg:pt-4">
           <FaMobileScreen className="text-shade-300" /> (+94)76-3236693
         </p>
       </div>

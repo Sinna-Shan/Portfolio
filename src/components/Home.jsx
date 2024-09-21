@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { BsFillSendFill } from "react-icons/bs";
 import { FaSquareGithub, FaLinkedin, FaFacebook } from "react-icons/fa6";
+import { Link } from "react-scroll";
 function Home() {
   return (
-    <section className="w-full bg-hero-img bg-cover">
-      <main className="flex min-h-screen w-full flex-col items-center bg-primary-300/85 px-4 py-4 backdrop-blur-sm md:flex-row md:gap-10 lg:px-10">
+    <section className="w-full bg-hero-img bg-cover" id="home">
+      <main className="flex min-h-screen w-full flex-col items-center justify-center bg-primary-300/85 px-4 py-4 backdrop-blur-sm md:flex-row md:gap-10 lg:px-10">
         <div
           className="z-10 flex h-full w-full flex-col items-center justify-center gap-2 to-blue-500 px-4 py-6 text-left sm:gap-1 md:items-end"
           data-aos="fade-down-right"
@@ -19,17 +20,26 @@ function Home() {
             A Designer | Full Stack Developer
           </h3>
           <div className="flex items-center justify-center gap-3 md:hidden">
-            <FaSquareGithub className="text-3xl text-shade-300 duration-300 ease-linear hover:text-white" />
-            <FaLinkedin className="text-3xl text-shade-300 duration-300 ease-linear hover:text-white" />
-            <FaFacebook className="text-3xl text-shade-300 duration-300 ease-linear hover:text-white" />
+            <a href="https://github.com/Sinna-Shan">
+              <FaSquareGithub className="text-3xl text-shade-300 duration-300 ease-linear hover:text-white" />
+            </a>
+            <a href="https://www.linkedin.com/in/noah-luth-57a0232a1/">
+              <FaLinkedin className="text-3xl text-shade-300 duration-300 ease-linear hover:text-white" />
+            </a>
+            <a href="https://web.facebook.com/noah.singho.1/">
+              <FaFacebook className="text-3xl text-shade-300 duration-300 ease-linear hover:text-white" />
+            </a>
           </div>
-          <a
+          <Link
+            to="contact"
+            smooth={true}
+            duration={1000}
+            offset={-62}
             className="mt-2 flex w-auto items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-3 text-lg text-white hover:bg-transparent hover:shadow-[inset_0_0_0_.1rem] hover:shadow-white hover:duration-500 md:mt-6 md:px-6 md:py-3 md:text-xl lg:px-8 lg:py-4 lg:text-2xl"
             href=""
           >
-            {" "}
             <BsFillSendFill /> let&apos;s connect
-          </a>
+          </Link>
         </div>
         <div
           className="order-first flex h-full w-full items-center justify-center gap-3 md:order-2 md:justify-start md:gap-5 lg:pl-10"
@@ -39,9 +49,15 @@ function Home() {
             <img src="my image new.jpg" alt=" my-image-for-hero-section" />
           </div>
           <div className="hidden flex-col items-center justify-center gap-3 md:flex lg:gap-5">
-            <FaSquareGithub className="text-3xl text-shade-100 duration-300 ease-linear hover:text-white md:text-4xl lg:text-5xl" />
-            <FaLinkedin className="text-3xl text-shade-100 duration-300 ease-linear hover:text-white md:text-4xl lg:text-5xl" />
-            <FaFacebook className="text-3xl text-shade-100 duration-300 ease-linear hover:text-white md:text-4xl lg:text-5xl" />
+            <a href="https://github.com/Sinna-Shan">
+              <FaSquareGithub className="text-3xl text-shade-100 duration-300 ease-linear hover:text-white md:text-4xl lg:text-5xl" />
+            </a>
+            <a href="https://www.linkedin.com/in/noah-luth-57a0232a1/">
+              <FaLinkedin className="text-3xl text-shade-100 duration-300 ease-linear hover:text-white md:text-4xl lg:text-5xl" />
+            </a>
+            <a href="https://web.facebook.com/noah.singho.1/">
+              <FaFacebook className="text-3xl text-shade-100 duration-300 ease-linear hover:text-white md:text-4xl lg:text-5xl" />
+            </a>
           </div>
         </div>
       </main>
